@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Abalone';
+    src: url('./../../static/font/abalone_smile/Abalone\ Smile.ttf');
+}
+
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-primary: #4285F4;
+
+    --ff: 'Abalone';
+    --fw-sm: 700;
+    --fw-lg: 700;
+    --fz-paragraph: 15px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    /* font-family: var(--ff); */
+}
+
+body {
+    color: #000000;
+    /* background-color: #f5f5f5; */
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.center {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cap {
+    /* background :rgb(0,0,0,0.5);
+        background :rgba(0,0,0,0.5); */
+    background: linear-gradient(180deg, transparent, rgb(60, 10, 139) 100%);
+    color: #ffffff;
+    z-index: 2;
+}
+
+.transition {
+    transition: all 600ms ease;
+}
+
+.zoom-bg {
+    transition: background-size transform 600ms ease;
+}
+
+.zoom-bg:hover {
+    background-size: 120% 120%;
+    transition: background-size 600ms ease;
+}
+
+.zoom-fit {
+    transition: transform 600ms ease;
+}
+
+.zoom-fit:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform 600ms ease;
+}
+
+.mh {
+    -webkit-min-height: 200px;
+    -moz-min-height: 200px;
+    -o-min-height: 200px;
+    min-height: 200px;
+}
+
+.mh-md {
+    -webkit-min-height: 350px;
+    -moz-min-height: 350px;
+    -o-min-height: 350px;
+    min-height: 350px;
+}
+
+.mh-lg {
+    -webkit-min-height: 500px;
+    -moz-min-height: 500px;
+    -o-min-height: 500px;
+    min-height: 500px;
+}
+
+/* Bootstrap  */
+/* ul.navbar-nav > li.nav-item > a.nav-link:hover {
+        color:#fff;
+        background :#000;
+} */
+
+
+
+/*-----------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------*/
+
+
+
+
+/* ====================== RESPONSIVE BOOTSTRAP ======================== */
+
+
+@media (max-width :576px) {
+
+    /*xs*/
+    #DrawerList {
+        width: 85vw;
+    }
+}
+
+@media (min-width :576px) {
+
+    /*sm*/
+    #DrawerList {
+        width: 55vw;
+    }
+}
+
+@media (min-width :768px) {
+
+    /*md*/
+    #DrawerList {
+        width: 25vw;
+    }
+}
+
+@media (min-width :991px) {
+    /*lg*/
+    #FilterButton{
+        display: none;
+    }
+}
+
+@media (min-width :1200px) {
+    /*xl*/
+
+}
+
+/* ====================== RESPONSIVE TAILWIND ======================== */
+
+@media (max-width: 640px) {
+    /* Tailwind sm */
+}
+
+@media (min-width: 640px) {
+    /* Tailwind md */
+}
+
+@media (min-width: 768px) {
+    /* Tailwind lg */
+}
+
+@media (min-width: 1024px) {
+    /* Tailwind xl */
+}
+
+@media (min-width: 1280px) {
+    /* Tailwind 2xl */
+}
+
+/* ====================== RESPONSIVE FRONTEND MENTOR ======================== */
+
+
+@media (min-width :375px) {
+    /*MOBILE*/
+
+}
+
+@media (min-width :1440px) {
+    /*DESKTOP*/
+
+}
+
+
+
+/*-----------------------------------------------------*/

@@ -1,0 +1,136 @@
+// ProductList.js
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setFilters, filterProducts } from './productsSlice';
+
+const ProductList = () => {
+  const dispatch = useDispatch();
+  const { filters, filteredProducts } = useSelector(state => state.products);
+
+  useEffect(() => {
+    dispatch(filterProducts());
+  }, [filters, dispatch]);
+
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    dispatch(setFilters({ [name]: value }));
+  };
+
+  return (
+    <div>
+      <div>
+        <input
+          type="text"
+          name="searchQuery"
+          value={filters.searchQuery}
+          onChange={handleFilterChange}
+          placeholder="Search..."
+        />
+        <select name="category" value={filters.category} onChange={handleFilterChange}>
+          <option value="">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          {/* Add more categories as needed */}
+        </select>
+        <input
+          type="range"
+          name="priceRange"
+          min="0"
+          max="100"
+          value={filters.priceRange[1]}
+          onChange={(e) => dispatch(setFilters({ priceRange: [0, e.target.value] }))}
+        />
+      </div>
+      <div>
+        {filteredProducts.map(product => (
+          <div key={product.id}>
+            <h3>{product.name}</h3>
+            <p>{product.category}</p>
+            <p>${product.price}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ProductList;
+
+
+
+---------------------------------------------------------------
+
+
+// Cart.jsx
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeItemFromCart } from '../redux/cartSlice';
+
+const Cart = () => {
+  const cartItems = useSelector(state => state.cart.items);
+  const totalQuantity = useSelector(state => state.cart.totalQuantity);
+  const totalPrice = useSelector(state => state.cart.totalPrice);
+  const dispatch = useDispatch();
+
+  const removeFromCartHandler = (id) => {
+    dispatch(removeItemFromCart(id));
+  };
+
+  return (
+    <div>
+      <h2>Your Shopping Cart</h2>
+      <p>Total Quantity: {totalQuantity}</p>
+      <p>Total Price: ${totalPrice.toFixed(2)}</p>
+      <ul>
+        {cartItems.map(item => (
+          <li key={item.id}>
+            <h3>{item.title}</h3>
+            <p>Quantity: {item.quantity}</p>
+            <p>Total Price: ${item.totalPrice.toFixed(2)}</p>
+            <button onClick={() => removeFromCartHandler(item.id)}>Remove</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Cart;
+
+
+
+
+---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+import { useParams } from 'react-router-dom';
+// import { Rating } from '@mui/material'; // Remove this line if Rating is not used
+import { useSelector } from 'react-redux';
+
+const ProductDetail = () => {
+    const { id } = useParams();
+    const product = useSelector(state => state.products.products.find(p => p.id === parseInt(id)));
+
+    if (!product) {
+        return <div>Loading...</div>;
+    }
+
+    return (
+        // <div>
+        //     <h1>{product.title}</h1>
+        //     <img src={product.image} alt={product.title} />
+        //     <p>{product.description}</p>
+        //     <p>${product.price}</p>
+        //     <Rating name="read-only" value={product.rating.rate} precision={0.5} size="small" readOnly />
+        // </div>
+    );
+};
+
+export default ProductDetail;

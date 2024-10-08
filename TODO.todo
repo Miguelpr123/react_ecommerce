@@ -1,0 +1,60 @@
+TODO: 
+
+spinner cuando estan cargando los productos
+paginas de ( checkout(fake) , detail product y cart )
+notificacion con sonner cuando se agregue al carrito
+hacer pagina de checkout fake (en tailwind ui hay un componente de checkout bueno)
+hacer un slider antes de los productos (pudieras poner en el texto ... Suscriase en nuestra tienda ,(enter y letras mas pequeñas) Obtenga nuestras mejores ofertas via email, y luego debajo boton azul para suscribirse )
+mouse hover product -> shadow
+breadcrumbs 
+sidear con categories (esta parte de categories como el gift, en azul y con la cantidad de productos disponibles de esa categoria)
+en el responsive movil la seccion del primer drawer que sea solo un botoncito de filter y ahi salgan las tallas
+en el titulito de arriba de los productos poner entre parentesis , gris y un tin mas pequeño la cantidad de productos que hay 
+
+(de manera opcional integrarle stripe de prueba)
+
+(de manera opcional hacer lo de favoritos poniendo un corazoncito)
+(de manera opcional hacer un account donde ponga un login(pudiera reutilizar el login que hice pero agregandole registro con google y si eso poner la fotico y todo en el menu)  )
+
+(opcional barra lateral con filtros (Categorias, Rango de precio, estrellas(de 1 a 5) ) )
+(opcional buscador en la barra lateral para filtrar mucho mejor)
+
+responsive drawer
+opcion de filter para alternativa del responsive como el de mui-x tables
+
+paginador (opcional)
+buscador dinamico que buscamientras escribe y si es posible sugiere (opcional)
+
+Toda la fucionalidad de los filtros
+
+Para una segunda version usar Redux toolkit para crear un store de productos global y usarlos en la aplicacion una vez cargados ya
+
+stripe + react -> https://www.youtube.com/watch?v=e-whXipfRvg&t=225s&pp=ygUOc3RyaXBlICsgcmVhY3Q%3D
+
+En el sidebar (Categorias , rating y rango de precios )
+poner el corazoncito en la parte superior de los productos  (Usar Checked)
+
+de manera opcional poner iconitos de la vista de cuadricula o vista de lista 
+ademas de en el sidebar poner las categorias arriba delos productos con un select de mui (opcional)
+
+El rango de precio puedes hacer unas tabs para que se escoja si rango o input con precio fijo
+
+Puedes agregar el filtro order by , ya que la api da la opcion ?sort
+
+seteador de precio min y max a travezde inputs 
+
+poner la cantidad de filtros que he aplicado
+en el cart drawer y en la vista del cart poner alguna forma de ver detalles del producto
+filtro de busqueda
+
+hacer las breadcrumbs (opcional)
+
+en detalles del producto poner debajo los relacionados (igual que en el carrito(people also bought) pero request a la categoria ) (en movil no ponerlo)
+
+
+
+
+numerito de la cantidad de filtros aplicados
+
+arreglar todas las warnings de la consola
+
