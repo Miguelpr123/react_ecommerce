@@ -35,7 +35,7 @@ export default function Navbar({ open, setOpen, toggleDrawer }) {
                         }} >
                             <NavLink to="/" >
                                 <Box className="flex items-center " >
-                                    <img src="./../../static/img/logo1.png" alt="Logo image" style={{ width: '50px' }} />
+                                    <img src="/img/logo1.png" alt="Logo image" style={{ width: '50px' }} />
                                     <Box className='flex flex-col' >
                                         <Typography variant="h6" component="div" sx={{ flexGrow: 1, ml: 1, mr: 6, my: 0, fontFamily: 'Abalone', fontSize: '150%' }}>
                                             Shopper<span style={{ color: '#4285F4' }}>24</span>

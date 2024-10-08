@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Abalone';
-    src: url('./../../static/font/abalone_smile/Abalone\ Smile.ttf');
+    src: url('/font/abalone_smile/Abalone_Smile.ttf') format('truetype');
 }
 
 :root {
